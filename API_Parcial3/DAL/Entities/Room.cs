@@ -8,7 +8,7 @@ namespace API_Parcial3.DAL.Entities
         [Display(Name = "Number")]
         [MaxLength(3, ErrorMessage = "Field {0} must have a maximum of {1} characters")]
         [Required(ErrorMessage = "Field {0} is mandatory!")]
-        public string Number { get; set; }
+        public String Number { get; set; }
 
         [Display(Name = "Guests limit")]
         [Range(1, 6, ErrorMessage = "Guests must be in the range 1 to 6")]

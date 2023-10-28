@@ -8,26 +8,26 @@ namespace API_Parcial3.DAL.Entities
         [Display(Name = "Hotel")] 
         [MaxLength(50, ErrorMessage = "Field {0} must have a maximum of {1} characters")] 
         [Required(ErrorMessage = "Field {0} is mandatory!")] 
-        public string Name { get; set; }
+        public String Name { get; set; }
 
         [Display(Name = "Address")]
         [MaxLength(40, ErrorMessage = "Field {0} must have a maximum of {1} characters")]
         [Required(ErrorMessage = "Field {0} mandatory!")]
-        public string Address { get; set; }
+        public String Address { get; set; }
 
         [Display(Name = "City")]
         [MaxLength(50, ErrorMessage = "Field {0} must have a maximum of {1} characters")]
         [Required(ErrorMessage = "Field {0} is mandatory!")]
-        public string City { get; set; }
+        public String City { get; set; }
 
         [Display(Name = "Phone")]
         [MaxLength(25, ErrorMessage = "Field {0} must have a maximum of {1} characters")]
-        public int? Phone { get; set; }
+        public String? Phone { get; set; }
 
         [Display(Name = "Stars")]
         [Range(1, 5, ErrorMessage = "Stars must be in the range 1 to 5")]
         [Required(ErrorMessage = "Field {0} is mandatory!")]
-        public string Stars { get; set; }
+        public int Stars { get; set; }
 
 
 

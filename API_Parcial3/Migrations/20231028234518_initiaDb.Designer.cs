@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API_Parcial3.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20231028224808_initialDb")]
-    partial class initialDb
+    [Migration("20231028234518_initiaDb")]
+    partial class initiaDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,13 +51,12 @@ namespace API_Parcial3.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("Phone")
+                    b.Property<string>("Phone")
                         .HasMaxLength(25)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(25)");
 
-                    b.Property<string>("Stars")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Stars")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
