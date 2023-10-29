@@ -1,6 +1,6 @@
 using API_Parcial3.DAL;
-using API_Parcial3.Migrations.Interfaces;
-using API_Parcial3.Migrations.Services;
+using API_Parcial3.Domain.Interfaces;
+using API_Parcial3.Domain.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 

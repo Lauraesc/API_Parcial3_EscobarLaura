@@ -1,10 +1,10 @@
 ﻿using API_Parcial3.DAL;
 using API_Parcial3.DAL.Entities;
-using API_Parcial3.Migrations.Interfaces;
+using API_Parcial3.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.Metrics;
 
-namespace API_Parcial3.Migrations.Services
+namespace API_Parcial3.Domain.Services
 {
     public class HotelService : IHotelService
     {
@@ -87,8 +87,8 @@ namespace API_Parcial3.Migrations.Services
                 throw new Exception(dbUpdateException.InnerException?.Message ?? dbUpdateException.Message);
 
             }
-            
-            
+
+
 
         }
     }

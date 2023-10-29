@@ -1,7 +1,7 @@
 ﻿using API_Parcial3.DAL.Entities;
 using System.Diagnostics.Metrics;
 
-namespace API_Parcial3.Migrations.Interfaces
+namespace API_Parcial3.Domain.Interfaces
 {
     public interface IHotelService
     {

@@ -1,5 +1,5 @@
 ﻿using API_Parcial3.DAL.Entities;
-using API_Parcial3.Migrations.Interfaces;
+using API_Parcial3.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.Metrics;
 

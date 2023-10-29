@@ -2,10 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Metrics;
 
-namespace API_Parcial3.Migrations.Interfaces
+namespace API_Parcial3.Domain.Interfaces
 {
     public interface IRoomService
     {
-        Task<Room> validateRoomAvailability(String number, Guid hotelId); 
+        Task<Room> validateRoomAvailability(string number, Guid hotelId);
     }
 }
