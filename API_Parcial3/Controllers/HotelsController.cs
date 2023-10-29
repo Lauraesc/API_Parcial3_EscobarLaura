@@ -34,7 +34,7 @@ namespace API_Parcial3.Controllers
         }
 
         [HttpGet, ActionName("Get")]
-        [Route("GetById/{id}")] //URL: api/countries/get
+        [Route("GetById/{id}")] 
         public async Task<ActionResult<Hotel>> GetHotelByIdAsync(Guid id)
         {
             if (id == null) return BadRequest("The Id is required!");

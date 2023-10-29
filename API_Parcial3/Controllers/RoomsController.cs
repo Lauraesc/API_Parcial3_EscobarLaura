@@ -9,7 +9,7 @@ namespace API_Parcial3.Controllers
     public class RoomsController : Controller
     {
         private readonly IRoomService _roomService;
-        //para conectarme a la interfaz necesito esta dependencia a la interfaz
+
         public RoomsController(IRoomService roomService)
         {
             _roomService = roomService;

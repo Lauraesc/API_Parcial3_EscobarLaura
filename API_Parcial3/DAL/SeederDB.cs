@@ -14,25 +14,22 @@ namespace API_Parcial3.DAL
 
         public async Task SeederAsync()
         {
-            //Primero: agregaré un método propio de EF que hace las veces del comando 'update-database'
-            //En otras palabras: un método que me creará la BD inmediatamente ponga en ejecución mi API
+
             await _context.Database.EnsureCreatedAsync();
 
-            //A partir de aquí vamos a ir creando métodos que me sirvan para prepoblar mi BD
+         
             await PopulateHotelsAsync();
 
-            await _context.SaveChangesAsync(); //Esta línea me guarda ls datos en BD
+            await _context.SaveChangesAsync(); 
         }
 
         #region Private Methods
         private async Task PopulateHotelsAsync()
         {
-            //El método Any() me indica si la tabla Countries tiene al menos un registro
-            //El método Any negado (!) me indica que no hay absolutamente nada en la tabla Countries.
 
             if (!_context.Hotels.Any())
             {
-                //Así creo yo un objeto país con sus respectivos estados
+     
                 _context.Hotels.Add(new Hotel
                 {
                     CreatedDate = DateTime.Now,
@@ -68,7 +65,7 @@ namespace API_Parcial3.DAL
                     }
                 });
 
-                //Aquí creo otro nuevo país
+             
                 _context.Hotels.Add(new Hotel
                 {
                     CreatedDate = DateTime.Now,
