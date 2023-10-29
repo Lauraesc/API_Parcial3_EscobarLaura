@@ -22,11 +22,10 @@ namespace API_Parcial3.DAL.Entities
 
 
         [Display(Name = "Hotel")]
-       
         public Hotel? Hotel { get; set; } 
 
         [Display(Name = "Id Hotel")]
-        public Guid? HotelId { get; set; } //FK
+        public Guid HotelId { get; set; } //FK
 
 
     }

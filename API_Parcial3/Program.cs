@@ -1,5 +1,8 @@
 using API_Parcial3.DAL;
+using API_Parcial3.Migrations.Interfaces;
+using API_Parcial3.Migrations.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,11 +14,12 @@ builder.Services.AddControllers();
 //this line generates the context when you run this API 
 builder.Services.AddDbContext<DataBaseContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-/*
+
 builder.Services.AddScoped<IHotelService, HotelService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
-*/
 builder.Services.AddTransient<SeederDB>();
 
 
